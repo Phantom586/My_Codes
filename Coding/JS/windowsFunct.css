@@ -1,0 +1,15 @@
+body{
+  background-color:powderblue;
+}
+h1{
+  font-family:cursive;
+  font-style: oblique;
+}
+.li ul{
+  text-decoration:none;
+}
+.list ul 
+.li ul li a:hover{
+  display:block;
+
+}
