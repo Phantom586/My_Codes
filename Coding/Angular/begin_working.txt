@@ -1,0 +1,32 @@
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'sandbox',
+    template: `<h1>{{ name }} is {{age}} years old</h1>
+                <h2>My name is {{ person.firstname }} {{person.lastname}}</h2>
+                <ul>
+                    <li>{{ 'Hello World' }}</li>
+                    <li>{{ 1+1 }}
+                    <li>{{ showAge() }}</li>
+                </ul>`
+})
+
+export class SandboxComponent{
+    name = 'Ph@ntom Boy';
+    age = 19;
+    person = {firstname:'Phantom', lastname:'Boy'}
+
+    constructor(){
+        console.log('Constructor ran.....');
+        //this.age = 20;
+        this.hasBirthday();
+    }
+
+    hasBirthday(){
+        this.age += 1;
+    }
+
+    showAge(){
+        return this.age;
+    }
+}

@@ -1,0 +1,26 @@
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'sandbox',
+    template: `<h1>Hello World</h1>`
+})
+
+export class SandboxComponent{
+    customer:Customer;
+
+    constructor(){
+        this.customer = {
+            id:1,
+            name:'Ph@ntom Boy',
+            email:'586pboy@gmail.com'
+        }
+    }
+
+    
+}
+
+interface Customer{
+    id:number,
+    name:string,
+    email:string
+}

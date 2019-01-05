@@ -1,0 +1,53 @@
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'sandbox',
+    template: `<h1>Hello World</h1>
+             {{people}}
+             <ul>
+                <li *ngFor="let person of people">
+                    {{person}}
+                </li>
+             </ul>
+             <ul>
+                <li *ngFor="let person of people; let i = index">
+                    {{i + 1}}{{person}}
+                </li>
+             </ul>
+             <ul>
+                <li *ngFor="let person of people2">
+                    {{person.firstname}} {{person.lastname}}
+				</li>   
+			</ul>
+    `,
+    styleUrls: ['./sandbox.component.css']
+})
+
+export class SandboxComponent{
+
+    people = ['Rick', 'Darrel', 'carl', 'Glen'];
+
+    people2 = [
+        {
+            firstname :'Rick',
+            lastname:'Grimes'
+        },
+        {
+            firstname :'Daryl',
+            lastname:'Dixon'
+        },
+        {
+            firstname :'Carl',
+            lastname:'Grimes'
+        },
+        {
+            firstname :'Glen',
+            lastname:'Rhee'
+        },
+    ];
+    constructor(){
+       this.people[2] = 'Carol';
+    }
+
+    
+}

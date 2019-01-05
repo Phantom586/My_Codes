@@ -1,0 +1,30 @@
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'sandbox',
+    template: `
+        <h1>Hello World</h1>
+        <!--
+        <!-- 3 ways to bind Properties -->
+        <div><img src="{{ imageUrl }}"></div>
+        <div><img [src]="imageUrl"></div> 
+        <div><img bind-src="imageUrl"></div> 
+
+        <h4>Image Location: <span [textContent]="imageUrl"></span></h4>
+        -->
+        <hr>
+        <h2>Create Post</h2>
+        <p [hidden]="isUnchanged">Post Has been Changed,Please Save.</p>
+        <button [disabled]="isUnchanged">Save</button>
+    `,
+    styleUrls: ['./sandbox.component.css']
+})
+
+export class SandboxComponent{
+
+imageUrl:string = 'http://lorempixel.com/400/200';
+isUnchanged:boolean = false;
+
+    
+}
+ 
