@@ -4,7 +4,7 @@ import textwrap
 def wrap(string, max_width):
     # Using the wrap method to obtain a list of characters of a specific length.
     str = textwrap.wrap(string, max_width)
-    # Printing the elements of the list.
+    # Printing the elements of the list..
     for i in str:
         print(i)
     return ''
