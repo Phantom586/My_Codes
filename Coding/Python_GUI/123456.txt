@@ -1,8 +1,0 @@
-123456
-7890
-10000.00
-0.33
-Deposit 500.00
-Withdrawl 200.00
-Deposit 400.00
-Withdrawl 100.00
