@@ -17,13 +17,18 @@ example_string = """
 
 
 # Match any type of emails
-pattern = re.compile(r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]+')
+email_pattern = re.compile(r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]+')
 
 
 # Match any type of URL's
-pattern = re.compile(r'(http|https)?(://)?[a-zA-Z]+\.[a-zA-Z0-9]+\.[a-z]+[/a-zA-Z0-9?=+-_]*')
+url_pattern = re.compile(r'(http|https)?(://)?[a-zA-Z]+\.[a-zA-Z0-9]+\.[a-z]+[/a-zA-Z0-9?=+-_]*')
 
-matches = pattern.finditer(example_string)
+match1 = email_pattern.finditer(example_string)
 
-for match in matches:
+match2 = url_pattern.finditer(example_string)
+
+for match in match1:
+    print(match)
+
+for match in match2:
     print(match)
