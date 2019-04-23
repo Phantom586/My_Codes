@@ -5,7 +5,6 @@
 # 3 - regular method -- they are just normal methods
 
 
-
 class Student:
 
     # initializing the class
