@@ -1,13 +1,13 @@
 import re
 
 example_string = """
-                harshchaurasia586@gmail.com
-                Ph@ntom#123
-                586pboy@gmail.com
-                Pboy1234
-                h.chaurasia@gmail.com
-                dyn_586@gmail.com
-                Dyn_123@yahoo.com
+                daniel#1234@gmail.com
+                Fhewfb#186
+                Juven5876@gmail.com
+                HDFKHG287#
+                h.kdjfhkdf@gmail.com
+                DFj_545@gmail.com
+                Fdhfh_4551@yahoo.com
                 www.google.com
                 https://www.packagecontrol.io
                 http://www.continuum.io/downloads
