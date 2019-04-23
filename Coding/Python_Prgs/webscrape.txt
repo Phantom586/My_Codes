@@ -1,0 +1,5 @@
+Start hosting quickly
+Just write your application. No need to configure or maintain a web server — everything is set up and ready to go.Develop anywhere
+Take your development environment with you! If you have a browser and an Internet connection, you've got everything you need.Teach and learn
+PythonAnywhere is a fully-fledged Python environment, ready to go, for students and teachers — concentrate on teaching, not on installation hassles.Amazing support
+Need help with PythonAnywhere? If you get in touch, you can talk directly with the development team. Help for developers, from developers.

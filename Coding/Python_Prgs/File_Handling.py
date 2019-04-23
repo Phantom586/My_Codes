@@ -1,3 +1,7 @@
+# This is a Simple Class to make File Handling Operations easier to use.
+# just create an instance of the class and its reaady to use.
+# All methods are well labelled with docstrings to demonstrate its purpose.
+
 class Editor(object):
     """
         Parameters : f_name
@@ -24,7 +28,7 @@ class Editor(object):
         """
         Parameters : None
         Description :
-            Extracts the Data of the File in a List.
+            Extracts the Data of the File in a /List.
 
         """
         data = []
