@@ -36,22 +36,26 @@ class Student:
 
 
 # This function provides documentation on any object that we need help for
-print(help(map))
+# print(help(map))
 
 
 # Creating an instance of the Student Class and passing the parameters and using methods of the Student class.
 
-s1 = Student('Harsh Chaurasia', 1716410101, 'CSE')
-s1.get_details()
-s1.is_of_college("PSIT")
+# s1 = Student('shiv kumar katheriya', 1716410223, 'CSE')
+# s1.get_details()
+# s2 = Student('harsh Chaurasia', 1716410223, 'CSE')
+# s2.get_details()
+# s3 = Student('Prakhar kumar', 1716410223, 'CSE')
+# s3.get_details()
+# s1.is_of_college("PSIT")
 
 
 # Creating an instance of the Student class via {extract_info}-classmethod.
 
 s2 = Student.extract_info("Harsh Chaurasia+1716410101+CSE")
 s2.get_details()
-s2.is_of_college("KIT")
+# s2.is_of_college("KIT")
 
 
 # This function can be used to know if an object is an instance of a class or not
-print(isinstance(s1, Student))
+# print(isinstance(s1, Student))
