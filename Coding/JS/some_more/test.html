@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/6.1.4/mocha.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/6.1.4/mocha.js"></script>
+        <script>
+            mocha.setup('bdd');
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.js"></script>
+        <script>
+            let assert = chai.assert;
+        </script>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Trying To do Some Testing in my JavaScript.</h1>
+            
+            <!-- <hr class="my-4">
+            <button class="btn btn-outline-primary" onclick="checkName()">Start Test</button> -->
+        </div>
+        <script src="my_func.js" ></script>
+            
+        <!-- the script with tests (describe, it...) -->
+        <script src="test.js"></script>
+            
+        <!-- the element with id="mocha" will contain test results -->
+        <div id="mocha"></div>
+            
+        <!-- run tests! -->
+        <script>
+        mocha.run();
+        </script>
+    </body>
+</html>
