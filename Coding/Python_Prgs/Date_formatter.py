@@ -29,6 +29,7 @@ for d in inp_dates:
     oup_dates.append('-'.join(d))
 
 # Generating a string of Standard Formatted Dates.
+# then append to the 'oup_dates' list.
 str = ''
 for i in oup_dates:
     str += i + '\n' 
