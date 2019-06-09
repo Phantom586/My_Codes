@@ -1,3 +1,7 @@
+# a regex that matches the full name of someone
+# whose last name is Nakamoto? You can assume that the first name that
+# comes before it will always be one word that begins with a capital letter
+
 import re
 
 pattern = re.compile(r'[A-Z][a-zA-Za-z]+\ (Nakamoto)')
