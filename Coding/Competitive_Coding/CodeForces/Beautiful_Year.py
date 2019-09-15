@@ -22,14 +22,18 @@
 #   2014
 
 
-year = list(map(int, input()))
-f = 1
-for i in range(len(year)):
-    c = year.count(i)
-    if c > 1:
-        f = 0
-        c = year.index(i, year.index(i)+1)
-        year[c] += 1
-if f:
-    year[3] += 1
-print(''.join(map(str, year)))
+# used Bruteforcing
+y = input()
+
+
+def check_unique(year):
+    global y
+    yr = y = str(int(year) + 1)
+    yr = [int(i) for i in yr]
+    return len(yr) == len(set(yr))
+
+
+chk = check_unique(y)
+while chk is not True:
+    chk = check_unique(y)
+print(y)

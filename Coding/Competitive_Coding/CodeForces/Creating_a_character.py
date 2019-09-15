@@ -70,7 +70,7 @@
 #         print(c)
 
 
-# My Improved Solution
+# Improved Solution
 
 t = int(input())
 for _ in range(t):
