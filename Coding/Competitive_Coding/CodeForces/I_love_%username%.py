@@ -25,15 +25,15 @@
 # participating in the contests.
 
 # Examples
-# inputCopy
+# input
 #   5
 #   100 50 200 150 200
-# outputCopy
+# output
 #   2
-# inputCopy
+# input
 #   10
 #   4664 6496 5814 7010 5762 5736 6944 4850 3698 7242
-# outputCopy
+# output
 #   4
 # Note
 # In the first sample the performances number 2 and 3 are amazing.
@@ -41,6 +41,14 @@
 
 n = int(input())
 scores = list(map(int, input().split()))
-for i in range(1, n+1):
-    if scores[i] > scores[i-1]:
-        pass
+mx = scores[0]
+mn = scores[0]
+c = 0
+for i in range(1, n):
+    if scores[i] > mx:
+        mx = scores[i]
+        c += 1
+    elif scores[i] < mn:
+        mn = scores[i]
+        c += 1
+print(c)
