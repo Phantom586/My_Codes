@@ -33,7 +33,7 @@ if n % 2 == 0:  # using the concept of A.P(Arithmetic Progression, with same dif
         s = 1 + (k - 1) * 2  # a = 1, as 1st element in odd no.'s will always be 1
         print(int(s))
     else:
-        s = 2 + (k - (n/2) - 1) * 2  # a = 2, as 1st element in even no.'s will always be 2, and (n - k - 1)
+        s = 2 + (k - (n/2) - 1) * 2  # a = 2, as 1st element in even no.'s will always be 2, and k - (n/2)
         # as to select only the even series
         print(int(s))
 else:
@@ -41,5 +41,6 @@ else:
         s = 1 + (k - 1) * 2  # a = 1, as 1st element in odd no.'s will always be 1
         print(int(s))
     else:
-        s = 2 + (k - (int(n/2) + 1) - 1) * 2  # a = 2, as 1st element in even no.'s will always be 2
+        s = 2 + (k - (int(n/2) + 1) - 1) * 2  # a = 2, as 1st element in even no.'s will always be 2, and k - ((n/2)+1)
+        # as to select only the even series
         print(int(s))
