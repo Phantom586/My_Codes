@@ -40,17 +40,15 @@
 
 n, m = map(int, input().split())
 line = list(map(int, input().split()))
-mx = [0, 0]
-flag = 1
-for i in range(len(line)):
-    a = line[i]
-    if a > m:
-        if int(a/m) >= mx[0]:
-            mx[0] = int(a/m)
-            mx[1] = i
-    else:
-        flag = 0
-if flag:
-    print(mx[1])
-else:
-    print(n)
++ve_elem = 1  # represents the number of (+)ve elements present in the list.
+l_index = n  # represents the index of the last child that leaves the Queue.
+while +ve_elem:
+    +ve_elem = 0
+    for i in range(len(line)):  # looping through all the elements in the array until there are any (+)ve elem's left.
+        if line[i] >= 0:  # if 'line[i]' is (+)ve i.e., >0
+            # print(line[i], " : ", end="")
+            line[i] = line[i] - m  # then subtracting m from it
+            # print(line[i], " : ", end="")
+            +ve_elem += 1
+            l_index = i+1  # we want index to start from 1 hence '+1'.
+print(l_index)

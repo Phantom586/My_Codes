@@ -19,15 +19,15 @@
 # cities with minimum travel time, print "Still Rozdil" (without the quotes).
 
 # Examples
-# inputCopy
+# input
 #   2
 #   7 4
-# outputCopy
+# output
 #   2
-# inputCopy
+# input
 #   7
 #   7 4 47 100 4 9 12
-# outputCopy
+# output
 #   Still Rozdil
 # Note
 # In the first sample there are only two cities where the Little Elephant can go. The travel time for the first town
@@ -37,22 +37,28 @@
 # In the second sample the closest cities are cities two and five, the travelling time to both of them equals 4, so
 # the answer is "Still Rozdil".
 
+
+# logic : if we have more than one occurrence of current minimum, then the list could possible have elements that have
+# less value than our current minimum, so we have to check the whole list to give a final verdict.
 n = int(input())
 lst = list(map(int, input().split()))
-mn = []
-tmp = [lst[0], 0]
-flag = 0
+mn = lst[0]
+c = 0
+index = 1
 
 for i in range(1, len(lst)):
-    if lst[i] in mn:
-        flag = 1
-        break
-    elif lst[i] < tmp[0]:
-        mn.append(lst[i])
-        tmp[0] = lst[i]
-        tmp[1] = i+1
+    if lst[i] < mn:
+        # print(f"min {mn}")
+        c = 0
+        mn = lst[i]
+        index = i+1
+        # print(f"new min - {lst[i]}, {i+1}")
+    elif lst[i] == mn:
+        # print(f"min - ({mn}, {index}), new - ({lst[i]}, {i+1})")
+        c += 1
+        # print(f"c : {c}")
 
-if flag:
+if c > 0:
     print("Still Rozdil")
 else:
-    print(tmp[1])
+    print(index)

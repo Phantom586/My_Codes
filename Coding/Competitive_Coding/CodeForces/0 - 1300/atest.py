@@ -1,6 +1,18 @@
-details = list(map(int, input().split()))
-d_toast = (details[1] * details[2])/details[6]
-l_toast = details[3] * details[4]
-s_toast = details[5]/details[7]
-toasts = min(d_toast, l_toast, s_toast)//details[0]
-print(int(toasts))
+n = int(input())
+lst = list(map(int, input().split()))
+mn = lst[0]
+c = 0
+index = 1
+
+for i in range(1, len(lst)):
+    if lst[i] < mn:
+        c = 0
+        mn = lst[i]
+        index = i+1
+    elif lst[i] == mn:
+        c += 1
+
+if c > 0:
+    print("Still Rozdil")
+else:
+    print(index)

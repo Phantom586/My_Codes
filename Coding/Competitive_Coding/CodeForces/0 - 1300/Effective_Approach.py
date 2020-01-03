@@ -70,16 +70,13 @@ lst = list(map(int, input().split()))
 queries = int(input())
 q_lst = list(map(int, input().split()))
 checked = [0 for i in range(n+1)]
+for i in range(queries):
+    a = lst.index(q_lst[i]) + 1
+    checked[i+1] = a
 p_approach = 0
 v_approach = 0
 for i in range(1, len(q_lst)+1):
-    if checked[i] == 0:
-        a = lst.index(q_lst[i-1])+1
-        checked[i] = a
-        p_approach += a
-        v_approach += n - a + 1
-    else:
-        a = checked[i]
-        p_approach += a
-        v_approach += n - a + 1
+    a = checked[i]
+    p_approach += a
+    v_approach += n - a + 1
 print(p_approach, v_approach)
