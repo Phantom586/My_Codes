@@ -42,6 +42,30 @@
 # minimized if the 1-st person in the queue buys a ticket to the 1-st plane, the 2-nd person — to the 1-st plane, the
 # 3-rd person — to the 2-nd plane, the 4-th person — to the 2-nd plane.
 
+# Solution - Though Process
+
+# Calculating Minimum - it is very easy, initially sort the seats in planes list ,then just decrease the value at
+# particular index until it becomes zero and simultaneously add it to global min variable, and then move to next index.
+
+# Calculating Maximum - it was a bit tricky for me, but as soon as i realized that after initially sorting the list
+# just what we have to do is think to decrease the values in the planes seats list as given below :
+
+# Suppose the list of seats in planes is given as :
+# [10, 10, 10, 7, 6, 5, 4, 3, 2, 1], now for maximum we have to find a way to decrease the list as following.
+# [9, 10, 10, 7, 6, 5, 4, 3, 2, 1]
+# [9, 9, 10, 7, 6, 5, 4, 3, 2, 1]
+# [9, 9, 9, 7, 6, 5, 4, 3, 2, 1]
+# [8, 9, 9, 7, 6, 5, 4, 3, 2, 1]
+# [8, 8, 9, 7, 6, 5, 4, 3, 2, 1]
+# [8, 8, 8, 7, 6, 5, 4, 3, 2, 1]
+# [7, 8, 8, 7, 6, 5, 4, 3, 2, 1]
+# [7, 7, 8, 7, 6, 5, 4, 3, 2, 1]
+# [7, 7, 7, 7, 6, 5, 4, 3, 2, 1]
+# [6, 7, 7, 7, 6, 5, 4, 3, 2, 1]
+# [6, 6, 7, 7, 6, 5, 4, 3, 2, 1]
+# [6, 6, 6, 7, 6, 5, 4, 3, 2, 1]
+# [6, 6, 6, 6, 6, 5, 4, 3, 2, 1]
+# [5, 6, 6, 6, 6, 5, 4, 3, 2, 1], and so on. It will give us the maximum.
 
 n, m = map(int, input().split())
 lst = list(map(int, input().split()))
