@@ -59,9 +59,21 @@ while j < n:
 i, j = 1, 0
 cst = lst[::-1]
 while j < n:
-    if cst[(i % m) - 1] != 0:
-        mx += cst[(i % m) - 1]
-        cst[(i % m) - 1] -= 1
-    j += 1
-    i += 1
+    index = i
+    print(f'\ni = {i-1}, ({index} >= {cst[index % m]})', end="")
+    if cst[(index % m) - 1] != 0 and (cst[(index % m) - 1] >= cst[index % m]):
+        if cst[(index % m) - 1] == cst[index % m]:
+            print(" Same neighbour", end="")
+            i += 1
+        else:
+            print(" Not Same neighbour", end="")
+            i = 1
+        print(f' {index} -= {1}')
+        mx += cst[(index % m) - 1]
+        cst[(index % m) - 1] -= 1
+        j += 1
+    else:
+        print(' not matched')
+        i += 1
+    print(cst, " max : ", mx)
 print(mx, mn)
